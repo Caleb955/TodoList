@@ -1,0 +1,162 @@
+html {
+    font-family: 'arial';
+    font-size: 100%;
+}
+
+body {
+    color-scheme: dark;
+    margin: 0;
+    height: 100vh;
+    background-color: #000;
+    display: grid;
+    place-content: center;
+    color: #fff;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+p, h1, h2, h3 {
+    margin-top: 0;
+}
+
+a:any-link {
+    text-decoration: none;
+}
+
+input::placeholder {
+    color: #fff;
+}
+
+.input-container {
+    /* background-color: #a4a3a3; */
+    overflow: hidden;
+    display: flex;
+    gap: 10px;
+}
+
+[class="input-field"] {
+    all: unset;
+    background: #a4a3a3;
+    padding-left: 1em;
+    border-radius: 20px;
+}
+
+.main {
+    background-color: hsl(0, 2%, 11%);
+    padding: 2rem;
+    border-radius: 0.5rem;
+    width: min(100%, 400px);
+    margin-inline: auto;
+}
+
+.btn {
+    border: none;
+    cursor: pointer;
+    background-color: rgb(59, 59, 59);
+    border-radius: 20px;
+    width: fit-content;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.btn:active {
+    opacity: .8;
+}
+
+.btn:hover .plus-svg {
+    rotate: 90deg;
+}
+
+#todo {
+    margin-top: 1.4rem;
+    height: 12em;
+    overflow: auto;
+    overscroll-behavior: contain;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    scrollbar-gutter: unset;
+}
+
+#todo::-webkit-scrollbar {
+    display: none;
+}
+
+.todo-grid {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: .6rem;
+    background-color: rgb(59, 59, 59);
+    border-radius: 20px;
+}
+
+.todo-grid > p {
+    margin-bottom: 0;
+    flex-grow: 1;
+}
+
+.todo-grid > div:last-child {
+    display: flex;
+}
+
+.todo-grid > div:last-child:hover {
+    opacity: 0.8;
+}
+
+.todo-grid > span > small {
+    align-self: center;
+}
+
+.delete {
+    width: 18px;
+    fill: rgb(251, 79, 79);
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    gap: .8rem;
+    margin-bottom: 1rem;
+}
+
+.header > h1 {
+    margin: 0;
+    letter-spacing: 2px;
+}
+
+.book {
+    fill: #c2c1c1;
+    width: 28px;
+}
+
+.marker {
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    background-color: #fff;
+    transition: .2s ease-in-out background-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.marker[checked] {
+    background-color: green;
+}
+
+.plus-svg {
+    width: 20px;
+    fill: #fff;
+    transition: .4s ease-in-out rotate;
+}
+
+.check-mark {
+    width: 12px;
+    fill: #fff;
+}
